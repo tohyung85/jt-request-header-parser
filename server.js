@@ -7,7 +7,7 @@ var useragent = require('express-useragent');
 
 var app = express();
 var port = process.env.PORT || 3000;
-var mongoURI = "mongodb://localhost:27017/req-header-parser";
+var mongoURI = "mongodb://heroku_hsrcddnq:7k154da7j86hrpsig8s1n68vm4@ds055495.mongolab.com:55495/heroku_hsrcddnq";
 
 mongo.connect(mongoURI, function(err, db) {
 	if (err) {
