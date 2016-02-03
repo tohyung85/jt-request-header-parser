@@ -4,11 +4,13 @@ function reqHandler (db) {
 	var collection = db.collection('info');
 
 	this.getInfo = function(req, res) {
-		var clickProjection = {'id': false};
+		var clickProjection = {'_id': false};
 
 		var ip = req.headers['x-forwarded-for']
 		var software = req.useragent.platform + req.useragent.os;
-		var userLanguage = req.headers["accept-language"];
+		var Language = req.headers["accept-language"];
+		var splitStr = Language.split(',');
+		var userLanguage = splitStr[0];
 
 		var information = {'ipaddress':ip, 'language': userLanguage, 'software': software};
 		console.log(req.headers);
