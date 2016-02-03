@@ -1,0 +1,24 @@
+{
+  "name": "jt-req-header-parser",
+  "version": "1.0.0",
+  "description": "allows retrieval of browser IP, language and OS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "requst",
+    "header",
+    "ip"
+  ],
+  "author": "Joshua Tan",
+  "license": "ISC",
+  "engines": {
+    "node": "5.5.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-useragent": "^0.2.4",
+    "mongodb": "^2.1.4"
+  }
+}
